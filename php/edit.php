@@ -6,8 +6,8 @@ if (!isset($_SESSION['email'])) {
 }
 
 $host = "localhost";
-$db_username = "php";
-$db_password = "Z4a)CGXs)]i.VJFw";
+$db_username = "root";
+$db_password = "";
 $database = "project";
 
 $conn = new mysqli($host, $db_username, $db_password, $database);
