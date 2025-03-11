@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa-IR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/register.css">
+    <script src="https://cdn.jsdelivr.net/npm/ionicons@5.5.2/dist/ionicons.js"></script>
+    <link rel="icon" type="image/png" href="../images/logos/hat.png">
+    <title>ثبت نام</title>
+</head>
+
+<body>
+    <section>
+        <form action="../php/register.php" method="post">
+            <h1>ثبت نام</h1>
+            <div class="inputbox">
+                <ion-icon name="mail-outline"></ion-icon>
+                <input type="email" id="username" dir="rtl" placeholder="ایمیل" name="email">
+            </div>
+            <div class="inputbox">
+                <ion-icon name="key-outline"></ion-icon>
+                <input type="password" id="password" dir="rtl" placeholder="رمز عبور" name="password">
+            </div>
+            <div class="inputbox">
+                <ion-icon name="key-outline"></ion-icon>
+                <input type="password" id="repeatpassword" dir="rtl" placeholder="تکرار رمز عبور" name="repeatpassword">
+            </div>
+            <div class="forget">
+                <label for="tos" id="checkbox"><input type="checkbox" id="tost">با
+                    <a href="./tos.html" id="tos">
+                        <pre> شرایط و ضوابط </pre>
+                    </a>موافقت می کنم.</label>
+            </div>
+            <button>ثبت نام</button>
+            <button type="button" onclick="window.location.href='../index.php';">بازگشت</button>
+            <div class="register">
+                <p>حساب داری؟<a href="./login.html"> وارد شو!</a></p>
+            </div>
+        </form>
+    </section>
+    <script src="../js/register.js"></script>
+</body>
+
+</html>

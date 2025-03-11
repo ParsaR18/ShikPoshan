@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Vazir;
+}
+
+@font-face {
+    font-family: Vazir;
+    src: url(../fonts/Vazirmatn-Regular.ttf);
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url("../images/loginbg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(75px);
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+form {
+    height: 100%;
+    width: 100%;
+}
+
+.h1 {
+    font-size: 2rem;
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #fff;
+}
+
+.div1 {
+    color: #fff;
+    font-size: 20px;
+    text-align: justify;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    height: 100%;
+    width: 100%;
+}
+
+.inputbox {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.inputbox input {
+    width: 100%;
+    height: 40px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #fff;
+    outline: none;
+    font-size: 1rem;
+    padding: 0 35px 0 5px;
+    color: #fff;
+}
+
+.inputbox input::placeholder {
+    color: #ccc;
+}
+
+.inputbox ion-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+button {
+	width: 100%;
+	height: 25px;
+	border-radius: 40px;
+	background-color: rgb(255, 255, 255, 1);
+	border: none;
+	outline: none;
+	cursor: pointer;
+    text-align: center;
+	font-size: 1rem;
+	font-weight: 600;
+	transition: all 0.5s ease;
+	margin-bottom: 20px;
+}
+
+button:hover {
+	background-color: rgb(255, 255, 255, 0.5);
+}

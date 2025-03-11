@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa-IR">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../styles/recovery.css">
+	<script src="https://cdn.jsdelivr.net/npm/ionicons@5.5.2/dist/ionicons.js"></script>
+	<link rel="icon" type="image/png" href="../images/logos/hat.png">
+	<title>بازیابی رمز عبور</title>
+</head>
+
+<body>
+	<section>
+		<form id="form" action="../php/recovery.php" method="post">
+			<h1>بازیابی رمز عبور</h1>
+			<div class="inputbox">
+				<ion-icon name="mail-outline"></ion-icon>
+				<input id="email" type="email" dir="rtl" placeholder="ایمیل" name="email" id="email">
+			</div>
+			<button type="submit">بعدی</button>
+			<div><a href="./login.html"><button type="button">بازگشت</button></a></div>
+		</form>
+	</section>
+	<script src="../js/recovery.js"></script>
+</body>
+
+</html>

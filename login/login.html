@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa-IR">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../styles/login.css">
+	<script src="https://cdn.jsdelivr.net/npm/ionicons@5.5.2/dist/ionicons.js"></script>
+	<link rel="icon" type="image/png" href="../images/logos/hat.png">
+	<title>ورود</title>
+</head>
+
+<body>
+	<section>
+		<form action="../php/login.php" method="post">
+			<h1>ورود به حساب کاربری</h1>
+			<div class="inputbox">
+				<ion-icon name="mail-outline"></ion-icon>
+				<input type="email" dir="rtl" placeholder="ایمیل" name="email">
+			</div>
+			<div class="inputbox">
+				<ion-icon name="key-outline"></ion-icon>
+				<input type="password" dir="rtl" placeholder="رمز عبور" name="password">
+			</div>
+			<div class="forget">
+				<label for=""><input type="checkbox">
+					<pre> به یاد داشته باش </pre>
+				</label>
+				<a href="./recovery.html">فراموشی رمز عبور</a>
+			</div>
+			<button>ورود</button>
+			<button type="button" onclick="window.location.href='../index.php';">بازگشت</button>
+			<div class="register">
+				<p>حساب نداری؟<a href="./register.html"> ثبت نام کن!</a></p>
+			</div>
+		</form>
+	</section>
+	<script src="../js/login.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,418 @@
+* {
+	box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
+	font-family: Vazir;
+  }
+  
+  @font-face {
+	font-family: Vazir;
+	src: url(../fonts/Vazirmatn-Regular.ttf);
+  }
+
+@font-face {
+  font-family: IranNastaliq;
+  src: url("../fonts/IranNastaliq.ttf");
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(90deg, rgba(0, 200, 0, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(200, 0, 0, 1) 100%);
+  color: white;
+  height: 60px;
+  padding: 10px;
+}
+
+.navbar #title {
+  margin-left: 50px;
+  color: blue;
+  font-family: IranNastaliq;
+}
+
+.navbar a {
+  display: inline-block;
+  padding: 7.5px 15px;
+  font-size: 20px;
+  background-color: khaki;
+  color: blue;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  position: initial;
+  margin: 5px;
+  font-family: IranNastaliq;
+}
+
+.navbar a ion-icon {
+  vertical-align: middle;
+  align-content: center;
+  color: black;
+}
+
+.navbar a ion-icon:hover {
+  color: crimson;
+}
+
+.slideshow-container {
+  max-width: 1500px;
+  position: relative;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.mySlides {
+  display: none;
+}
+
+.mySlides:first-of-type {
+  display: block;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+.mySlides img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slideshow-container,
+.mySlides {
+  width: 1500px;
+  height: 600px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  padding: 20px;
+}
+
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+}
+
+#wls {
+  background-image: url(../images/womenleathershoes.jpg);
+}
+
+#nawb {
+  background-image: url(../images/niggaandwhitebags.jpg);
+}
+
+#ms {
+  background-image: url(../images/mensuit.jpg);
+}
+
+.grid-item h2 {
+  color: steelblue;
+  font-size: 30px;
+  text-shadow: 2px 2px 4px black;
+  font-weight: bold;
+}
+
+.grid-item a {
+  display: inline-block;
+  padding: 5px 5px;
+  font-size: 40px;
+  opacity: 0.75;
+  background: rgb(40, 40, 69);
+  color: rgb(255, 175, 69);
+  text-decoration: none;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  position: initial;
+  margin: 20px;
+}
+
+.grid-item a:hover {
+  opacity: 1;
+  color: rgb(40, 40, 69);
+  background-color: rgb(255, 175, 69);
+}
+
+.model {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 982px;
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+}
+
+.model h2 {
+  color: oldlace;
+  font-size: 40px;
+  text-shadow: 2px 2px 4px black;
+}
+
+.model a {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 40px;
+  opacity: 0.75;
+  background: #add8e6;
+  color: #0d326e;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  position: initial;
+  margin: 20px;
+}
+
+.model a:hover {
+  opacity: 1;
+  color: #add8e6;
+  background-color: #0d326e;
+}
+
+#nowmood {
+  background-image: url(../images/fashiontrend.jpg);
+}
+
+#np {
+  background-image: url(../images/newproduct.jpg);
+}
+
+.clothing {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  margin: 20px;
+}
+
+.clothing h2 {
+  color: gainsboro;
+  font-size: 40px;
+  text-shadow: 2px 2px 4px black;
+}
+
+.clothing a {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 40px;
+  opacity: 0.75;
+  background: #add8e6;
+  color: #0d326e;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  position: initial;
+  margin: 20px;
+  margin-left: 0%;
+}
+
+.clothing a:hover {
+  opacity: 1;
+  color: #add8e6;
+  background-color: #0d326e;
+}
+
+.product {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+}
+
+.product h2 {
+  color: white;
+  font-size: 40px;
+  text-shadow: 2px 2px 4px black;
+}
+
+.product a {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 40px;
+  background: lightblue;
+  color: blue;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  position: initial;
+  margin: 20px;
+  margin-left: 0%;
+}
+
+.product a:hover {
+  color: black;
+  background-color: white;
+}
+
+.footer {
+  display: flex;
+  width: auto;
+  height: 340px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  background-color: black;
+  color: white;
+  padding: 20px;
+  padding-right: 100px;
+  padding-top: 0px;
+  font-weight: bold;
+}
+
+.footer h3 {
+  font-size: 20px;
+  margin: 10px;
+}
+
+.footer #fonth3 {
+  font-family: IranNastaliq;
+  font-size: 50px;
+}
+
+.footer #fh3 {
+  padding-top: 5%;
+}
+
+.footer ul {
+  list-style: none;
+}
+
+.footer li {
+  margin: 5px;
+  margin-top: 15px;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer #ahover:hover {
+  color: gold;
+}
+
+.help {
+  margin: 10px;
+  height: 300px;
+  width: 350px;
+  
+}
+
+.follow {
+  margin: 10px;
+  height: 300px;
+  width: 150px;
+}
+
+.tenor-gif-embed {
+  margin: 10px;
+  padding: 10px;
+}
+
+.gifs {
+  height: 300px;
+  width: 400px;
+  margin: 10px;
+}
+
+.cr2024 {
+  background: linear-gradient(to right, #FF0000, #0000FF);
+  text-align: center;
+  color: khaki;
+}
