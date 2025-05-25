@@ -1,0 +1,299 @@
+:root {
+  --uploaded-font-primary: Vazir, Arial, sans-serif;
+  --uploaded-text-light: #fff;
+  --uploaded-glass-bg: rgba(0, 0, 0, 0.3);
+  --uploaded-glass-border: rgba(255, 255, 255, 0.25);
+  --uploaded-glass-blur: 18px;
+  --uploaded-link-color: #cce7ff;
+  --uploaded-border-radius: 15px;
+  --uploaded-bold-font-weight: 700;
+  --item-bg: rgba(255, 255, 255, 0.08);
+  --item-border: rgba(255, 255, 255, 0.15);
+  --item-hover-bg: rgba(255, 255, 255, 0.12);
+  --delete-button-bg: rgba(220, 53, 69, 0.3);
+  --delete-button-hover-bg: rgba(220, 53, 69, 0.5);
+  --message-success-bg: rgba(40, 167, 69, 0.25);
+  --message-success-text: #e6ffe6;
+  --message-success-border: rgba(40, 167, 69, 0.5);
+  --message-error-bg: rgba(220, 53, 69, 0.25);
+  --message-error-text: #ffe6e6;
+  --message-error-border: rgba(220, 53, 69, 0.5);
+  --message-info-bg: rgba(23, 162, 184, 0.25);
+  --message-info-text: #e6f7ff;
+  --message-info-border: rgba(23, 162, 184, 0.5);
+}
+
+body.page-uploaded {
+  font-family: var(--uploaded-font-primary);
+  color: var(--uploaded-text-light);
+  margin: 0;
+  direction: rtl;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  background-image: url(../images/registerbg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 0 20px;
+  font-weight: var(--uploaded-bold-font-weight);
+}
+
+.page-header-transparent {
+  width: 100%;
+  max-width: 1200px;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--uploaded-text-light);
+}
+.page-header-transparent .logo-title {
+  display: flex;
+  align-items: center;
+}
+.page-header-transparent .logo {
+  height: 40px;
+  width: auto;
+  margin-left: 10px;
+}
+.page-header-transparent h1 {
+  font-size: 1.8rem;
+  margin: 0;
+  font-weight: var(--uploaded-bold-font-weight);
+}
+.page-header-transparent nav a {
+  color: var(--uploaded-link-color);
+  text-decoration: none;
+  margin-right: 1.5rem;
+  font-weight: var(--uploaded-bold-font-weight);
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 10px;
+  border-radius: var(--uploaded-border-radius);
+  transition: background-color 0.3s ease;
+}
+.page-header-transparent nav a ion-icon {
+  margin-left: 8px;
+  font-size: 1.3em;
+}
+.page-header-transparent nav a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.uploaded-glass-panel {
+  width: 100%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: var(--uploaded-glass-bg);
+  border: 1px solid var(--uploaded-glass-border);
+  border-radius: var(--uploaded-border-radius);
+  backdrop-filter: blur(var(--uploaded-glass-blur));
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.uploaded-glass-panel #page-title {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: var(--uploaded-bold-font-weight);
+}
+
+.form-message {
+  padding: 0.8rem 1rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: var(--uploaded-bold-font-weight);
+  font-size: 0.95rem;
+}
+.form-message.success {
+  background-color: var(--message-success-bg);
+  color: var(--message-success-text);
+  border-color: var(--message-success-border);
+}
+.form-message.error {
+  background-color: var(--message-error-bg);
+  color: var(--message-error-text);
+  border-color: var(--message-error-border);
+}
+.form-message.info {
+  background-color: var(--message-info-bg);
+  color: var(--message-info-text);
+  border-color: var(--message-info-border);
+}
+
+.image-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.image-entry {
+  background-color: var(--item-bg);
+  border: 1px solid var(--item-border);
+  border-radius: var(--uploaded-border-radius);
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  transition: background-color 0.2s ease;
+}
+.image-entry:hover {
+  background-color: var(--item-hover-bg);
+}
+
+.image-info-ltr {
+  display: flex;
+  align-items: center;
+  direction: ltr !important;
+  gap: 1rem;
+  flex-grow: 1;
+}
+
+.image-number {
+  font-size: 1.1rem;
+  font-weight: var(--uploaded-bold-font-weight);
+  min-width: 25px;
+  text-align: left;
+}
+
+.thumbnail-link {
+  display: inline-block;
+}
+.thumbnail {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--uploaded-glass-border);
+  transition: transform 0.2s ease;
+}
+.thumbnail:hover {
+  transform: scale(1.05);
+}
+
+.image-filename {
+  font-size: 0.95rem;
+  word-break: break-all;
+  flex-grow: 1;
+  text-align: left;
+  font-weight: normal;
+  line-height: 1.3;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.delete-form {
+  margin: 0;
+  flex-shrink: 0;
+}
+.delete-button {
+  background-color: var(--delete-button-bg);
+  color: var(--uploaded-text-light);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: var(--uploaded-bold-font-weight);
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  transition: background-color 0.2s ease;
+}
+.delete-button ion-icon {
+  margin-left: 6px;
+  font-size: 1.2em;
+}
+.delete-button:hover {
+  background-color: var(--delete-button-hover-bg);
+}
+
+.no-images-message {
+  text-align: center;
+  font-size: 1.1rem;
+  padding: 2rem;
+  font-weight: var(--uploaded-bold-font-weight);
+}
+
+.page-footer-transparent {
+  width: 100%;
+  max-width: 1200px;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: auto;
+  font-size: 0.9rem;
+  color: var(--uploaded-text-light);
+}
+.page-footer-transparent p {
+  font-weight: var(--uploaded-bold-font-weight);
+}
+
+@media (max-width: 768px) {
+  body.page-uploaded {
+    padding: 0 10px;
+  }
+  .page-header-transparent {
+    padding: 1rem 0;
+    flex-direction: column;
+    text-align: center;
+  }
+  .page-header-transparent .logo-title {
+    margin-bottom: 0.5rem;
+  }
+  .page-header-transparent nav {
+    margin-top: 0.5rem;
+  }
+  .page-header-transparent nav a {
+    margin: 0.5rem;
+  }
+  .uploaded-glass-panel {
+    margin: 1rem auto;
+    padding: 1.5rem;
+  }
+  .uploaded-glass-panel #page-title {
+    font-size: 1.6rem;
+  }
+  .image-entry {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  .image-info-ltr {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+  .image-filename {
+    min-width: auto;
+    width: 100%;
+    margin-top: 0.5rem;
+    text-align: right;
+  }
+  .image-number,
+  .thumbnail-link {
+    text-align: right;
+  }
+  .image-info-ltr > .image-number,
+  .image-info-ltr > .thumbnail-link,
+  .image-info-ltr > .image-filename {
+    text-align: left;
+  }
+
+  .delete-form {
+    width: 100%;
+    margin-top: 0.75rem;
+  }
+  .delete-button {
+    width: 100%;
+    justify-content: center;
+  }
+}

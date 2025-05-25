@@ -1,0 +1,233 @@
+:root {
+  --delete-font-primary: Vazir, Arial, sans-serif;
+  --delete-text-light: #fff;
+  --delete-glass-bg: rgba(0, 0, 0, 0.25);
+  --delete-glass-border: rgba(255, 255, 255, 0.25);
+  --delete-glass-blur: 15px;
+  --delete-input-bg: rgba(255, 255, 255, 0.15);
+  --delete-input-border: rgba(255, 255, 255, 0.4);
+  --delete-input-focus-border: rgba(255, 255, 255, 0.7);
+  --delete-input-focus-bg: rgba(255, 255, 255, 0.25);
+  --delete-button-confirm-bg: rgba(220, 53, 69, 0.5);
+  --delete-button-confirm-hover-bg: rgba(220, 53, 69, 0.7);
+  --delete-button-initiate-bg: rgba(255, 193, 7, 0.3);
+  --delete-button-initiate-hover-bg: rgba(255, 193, 7, 0.5);
+  --delete-button-cancel-bg: rgba(108, 117, 125, 0.3);
+  --delete-button-cancel-hover-bg: rgba(108, 117, 125, 0.5);
+  --delete-link-color: #bfe8ff;
+  --delete-border-radius: 15px;
+  --delete-bold-font-weight: 700;
+  --message-warning-bg: rgba(255, 193, 7, 0.2);
+  --message-warning-text: #fff3cd;
+  --message-warning-border: rgba(255, 193, 7, 0.4);
+  --message-error-bg: rgba(220, 53, 69, 0.2);
+  --message-error-text: #f8d7da;
+  --message-error-border: rgba(220, 53, 69, 0.4);
+}
+
+body.page-delete {
+  font-family: var(--delete-font-primary);
+  color: var(--delete-text-light);
+  margin: 0;
+  direction: rtl;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  background-image: url(../images/dashboardbg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 0 20px;
+  font-weight: var(--delete-bold-font-weight);
+}
+
+.page-header-transparent {
+  width: 100%;
+  max-width: 1100px;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--delete-text-light);
+}
+.page-header-transparent .logo-title {
+  display: flex;
+  align-items: center;
+}
+.page-header-transparent .logo {
+  height: 40px;
+  width: auto;
+  margin-left: 10px;
+}
+.page-header-transparent h1 {
+  font-size: 1.8rem;
+  margin: 0;
+  font-weight: var(--delete-bold-font-weight);
+}
+.page-header-transparent nav a {
+  color: var(--delete-link-color);
+  text-decoration: none;
+  margin-right: 1.5rem;
+  font-weight: var(--delete-bold-font-weight);
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 10px;
+  border-radius: var(--delete-border-radius);
+  transition: background-color 0.3s ease;
+}
+.page-header-transparent nav a ion-icon {
+  margin-left: 8px;
+  font-size: 1.3em;
+}
+.page-header-transparent nav a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.delete-glass-panel {
+  width: 100%;
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2.5rem;
+  background-color: var(--delete-glass-bg);
+  border: 1px solid var(--delete-glass-border);
+  border-radius: var(--delete-border-radius);
+  backdrop-filter: blur(var(--delete-glass-blur));
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  text-align: center;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.delete-glass-panel h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  font-weight: var(--delete-bold-font-weight);
+}
+.delete-glass-panel .confirmation-text {
+  font-size: 1.05rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+  font-weight: var(--delete-bold-font-weight);
+}
+.form-message {
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid transparent;
+  border-radius: var(--delete-border-radius);
+  text-align: center;
+  font-weight: var(--delete-bold-font-weight);
+}
+.form-message.warning {
+  background-color: var(--message-warning-bg);
+  color: var(--message-warning-text);
+  border-color: var(--message-warning-border);
+}
+.form-message.error {
+  background-color: var(--message-error-bg);
+  color: var(--message-error-text);
+  border-color: var(--message-error-border);
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+#confirmDeleteForm label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+#confirmDeleteForm input[type="password"] {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  color: var(--delete-text-light);
+  background-color: var(--delete-input-bg);
+  border: 1px solid var(--delete-input-border);
+  border-radius: 10px;
+  outline: none;
+  font-weight: var(--delete-bold-font-weight);
+}
+#confirmDeleteForm input[type="password"]:focus {
+  border-color: var(--delete-input-focus-border);
+  background-color: var(--delete-input-focus-bg);
+}
+
+.form-button {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: var(--delete-bold-font-weight);
+  color: var(--delete-text-light);
+  border: 1px solid var(--delete-glass-border);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+  margin: 0.5rem;
+  text-decoration: none;
+}
+.form-button.initiate {
+  background-color: var(--delete-button-initiate-bg);
+}
+.form-button.initiate:hover {
+  background-color: var(--delete-button-initiate-hover-bg);
+}
+.form-button.confirm {
+  background-color: var(--delete-button-confirm-bg);
+}
+.form-button.confirm:hover {
+  background-color: var(--delete-button-confirm-hover-bg);
+}
+.form-button.cancel {
+  background-color: var(--delete-button-cancel-bg);
+}
+.form-button.cancel:hover {
+  background-color: var(--delete-button-cancel-hover-bg);
+}
+
+.page-footer-transparent {
+  width: 100%;
+  max-width: 1100px;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: auto;
+  font-size: 0.9rem;
+  color: var(--delete-text-light);
+}
+.page-footer-transparent p {
+  font-weight: var(--delete-bold-font-weight);
+}
+
+@media (max-width: 768px) {
+  body.page-delete {
+    padding: 0 10px;
+  }
+  .page-header-transparent {
+    padding: 1rem 0;
+    flex-direction: column;
+    text-align: center;
+  }
+  .page-header-transparent .logo-title {
+    margin-bottom: 0.5rem;
+  }
+  .page-header-transparent nav {
+    margin-top: 0.5rem;
+  }
+  .page-header-transparent nav a {
+    margin: 0.5rem;
+  }
+  .delete-glass-panel {
+    margin: 1rem auto;
+    padding: 1.5rem;
+  }
+  .delete-glass-panel h2 {
+    font-size: 1.6rem;
+  }
+  .form-button {
+    width: calc(100% - 1rem);
+  }
+}
